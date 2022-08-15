@@ -11,5 +11,5 @@ inputs:
     description: 'Key=Value pairs to push to SSM. Key do not need to have arn.'
     required: true
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'

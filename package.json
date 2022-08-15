@@ -1,6 +1,9 @@
 {
   "name": "aws-ssm-parameter-store",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "description": "Inject parameters and secrets into AWS SSM Parameter Store in your CI.",
   "main": "index.js",
   "scripts": {
