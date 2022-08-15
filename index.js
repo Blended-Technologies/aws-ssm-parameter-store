@@ -18,6 +18,8 @@ async function run() {
   await Promise.all(secrets.map((s) => saveSecret(ssm, s)));
 
   core.info(`Successfully Stored ${secrets.length} parameters.`);
+
+  core.info(`https://${AWS.config.region}.console.aws.amazon.com/systems-manager/parameters/?region=${AWS.config.region}&tab=Table`)
 }
 
 async function saveSecret(ssm, secret) {
