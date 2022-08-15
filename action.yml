@@ -1,31 +1,15 @@
-name: "AWS Parameter Store Injector"
-description: "Secret management for GitHub Actions using AWS Systems Manager Parameter Store."
+name: 'AWS Parameter Store Injector'
+description: 'Secret management for GitHub Actions using AWS Systems Manager Parameter Store.'
 branding:
   icon: briefcase
   color: orange
 inputs:
   aws-region:
     required: true
-    description: "The AWS Region to use"
-  ssm-path:
-    description: "The Path of the SSM Parameter Store path to store"
+    description: 'The AWS Region to use'
+  secrets:
+    description: 'Key=Value pairs to push to SSM. Key do not need to have arn.'
     required: true
-  ssm-value-description:
-    description: "A description of the value being inserted into SSM"
-    default: ""
-  ssm-value:
-    description: "The value to be stored in the SSM Parameter Store Path"
-    required: true
-  ssm-value-type:
-    description: "The value type to store the SSM Parameter (String | StringList | SecureString)"
-    required: true
-    default: "SecureString"
-  ssm-value-overwrite:
-    description: "Overwrite the value of the SSM Parameter when inserting"
-    default: true
-  ssm-kms-key-id:
-    description: "The AWS KMS Key ARN to use to encrypt the key"
-    default: ""
 runs:
-  using: "node12"
-  main: "index.js"
+  using: 'node12'
+  main: 'index.js'
