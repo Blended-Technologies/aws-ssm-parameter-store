@@ -4,7 +4,9 @@
   "description": "Inject parameters and secrets into AWS SSM Parameter Store in your CI.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint **.js",
+    "prettier": "prettier --write --loglevel error .",
+    "test": "eslint **.js && jest"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +16,10 @@
     "@actions/github": "^5.0.0",
     "@aws-sdk/client-ssm": "^3.43.0",
     "aws-sdk": "^2.1039.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "jest": "^28.1.3",
+    "prettier": "2.7.1"
   }
 }
